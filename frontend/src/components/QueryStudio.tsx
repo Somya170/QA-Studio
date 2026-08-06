@@ -49,7 +49,7 @@ export const QueryStudio: React.FC = () => {
 
   const fetchDocuments = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:8000/api/documents');
+      const res = await fetch('/api/documents');
       const data = await res.json();
       setDocuments(data.documents || []);
     } catch (err) {
