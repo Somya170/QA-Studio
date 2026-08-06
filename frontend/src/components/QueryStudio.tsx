@@ -111,7 +111,7 @@ export const QueryStudio: React.FC = () => {
               <div className="text-[10px] text-cyan-400 font-bold uppercase tracking-wider flex items-center justify-between">
                 <span>AI Data Insights Profile</span>
                 <button 
-                  onClick={loadProfile}
+                  onClick={() => { loadProfile(); fetchDocuments(); }}
                   disabled={refreshingProfile}
                   className="hover:text-cyan-300 transition flex items-center gap-1 disabled:opacity-50"
                   title="Reload suggestions"
