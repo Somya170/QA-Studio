@@ -10,7 +10,7 @@ import io
 from pathlib import Path
 from typing import List, Dict, Callable, Optional
 
-# Tesseract paths for Windows
+# Tesseract paths for Windows (fallback for local dev; Linux uses PATH via shutil.which)
 TESSERACT_PATHS = [
     r"C:\Program Files\Tesseract-OCR\tesseract.exe",
     r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe",
@@ -18,7 +18,11 @@ TESSERACT_PATHS = [
 ]
 
 def _find_tesseract() -> Optional[str]:
-    """Locate Tesseract binary on Windows."""
+    """Locate Tesseract binary. Checks system PATH first (Linux/Docker/Mac), then falls back to known Windows install paths."""
+    import shutil
+    on_path = shutil.which("tesseract")
+    if on_path:
+        return on_path
     for p in TESSERACT_PATHS:
         if os.path.exists(p):
             return p
