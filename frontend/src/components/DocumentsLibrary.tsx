@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FileText, Trash2, RefreshCw, Upload, AlertCircle, Search, Pencil, Check, X } from 'lucide-react';
 
-const API_BASE = 'http://127.0.0.1:8000/api';
+const API_BASE = '/api';
 
 interface DocInfo {
   filename: string;
