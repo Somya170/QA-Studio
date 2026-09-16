@@ -21,12 +21,7 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Brand Logo & Badge */}
-        <div className="flex items-center space-x-3">
-          <img 
-            src="/yash_logo.png" 
-            className="h-9 object-contain rounded-md bg-white p-1" 
-            alt="DA" 
-          />
+
           <span className="px-2 py-0.5 text-[9px] font-bold tracking-wider rounded-full flex items-center gap-1 data-qa-badge">
             <ShieldCheck className="w-2.5 h-2.5" /> DATA QA STUDIO
           </span>
