@@ -25,7 +25,7 @@ export const Header: React.FC<HeaderProps> = ({
           <img 
             src="/yash_logo.png" 
             className="h-9 object-contain rounded-md bg-white p-1" 
-            alt="Yash Technologies Logo" 
+            alt="DA" 
           />
           <span className="px-2 py-0.5 text-[9px] font-bold tracking-wider rounded-full flex items-center gap-1 data-qa-badge">
             <ShieldCheck className="w-2.5 h-2.5" /> DATA QA STUDIO
