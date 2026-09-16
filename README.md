@@ -122,6 +122,3 @@ npm run dev
 
 ---
 
-## 📄 License
-
-Internal project — YASH Technologies.
